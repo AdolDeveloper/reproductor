@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Reproductor de Música</title>
+</head>
+<body>
+  <div id="app">
+    <h1>Reproductor de Música</h1>
+    
+    <!-- Formulario para subir archivos -->
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <label for="audioFile">Seleccionar archivo de audio:</label>
+      <input type="file" name="audioFile" id="audioFile" accept=".mp3" required>
+      <button type="submit">Subir</button>
+    </form>
+    
+    <!-- Lista de canciones -->
+    <ul id="playlist">
+      <!-- Aquí se mostrarán las canciones disponibles -->
+    </ul>
+    
+    <!-- Reproductor de audio -->
+    <audio id="audioPlayer" controls>
+      <source id="audioSource" src="" type="audio/mp3">
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
