@@ -7,7 +7,7 @@ app.use(fileUpload());
 
 const GITHUB_USERNAME = 'AdolDeveloper';
 const GITHUB_REPO = 'reproductor';
-const GITHUB_TOKEN = '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';
+const GITHUB_TOKEN = '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';
 
 // Ruta para servir archivos estáticos (por ejemplo, archivos de audio)
 app.use(express.static('music'));
