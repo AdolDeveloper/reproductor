@@ -10,7 +10,7 @@ const GITHUB_REPO = 'reproductor';
 const GITHUB_TOKEN = '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';
 
 // Ruta para servir archivos estáticos (por ejemplo, archivos de audio)
-app.use(express.static('uploads'));
+app.use(express.static('music'));
 
 // Ruta para la página principal
 app.get('/', (req, res) => {
@@ -25,7 +25,7 @@ app.post('/upload', async (req, res) => {
     }
 
     const audioFile = req.files.audioFile;
-    const uploadPath = __dirname + '/uploads/' + audioFile.name;
+    const uploadPath = __dirname + '/music/' + audioFile.name;
 
     audioFile.mv(uploadPath, async (err) => {
       if (err) {
